@@ -1,9 +1,11 @@
-# Cookiecutter Data Science
+# Cookiecutter CKD
 
-_A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
+Spork of: [cookiecutter-data-science](http://drivendata.github.io/cookiecutter-data-science/).
+
+_A very niche template for kick-starting Chronic Kidney Disease analyses._
 
 
-#### [Project homepage](http://drivendata.github.io/cookiecutter-data-science/)
+#### [Project Homepage](https://www.goodreads.com/book/show/24445517-maybe-someday)
 
 
 ### Requirements to use the cookiecutter template:
@@ -26,7 +28,7 @@ $ conda install cookiecutter
 ### To start a new project, run:
 ------------
 
-    cookiecutter -c v1 https://github.com/drivendata/cookiecutter-data-science
+    cookiecutter -c v1 https://github.com/martinklamrowski/cookiecutter-ckd
 
 
 [![asciicast](https://asciinema.org/a/244658.svg)](https://asciinema.org/a/244658)
@@ -48,17 +50,18 @@ The directory structure of your new project looks like this:
 
 ```
 ├── LICENSE
-├── Makefile           <- Makefile with commands like `make data` or `make train`
+├── Makefile           <- Makefile with commands like `make data` or `make train`.
 ├── README.md          <- The top-level README for developers using this project.
 ├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
+│   ├── public         <- Publicly available datasets. Populated with some samples by default.
+│   └── confidential   <- Confidential patient data. Explicitly marked for no oopsies.
+│       ├── interim    <- Intermediate data that has been transformed.
+│       ├── versioned  <- Versioned datasets for specific analyses.
+│       └── source     <- The original, immutable data dump(s).
 │
-├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+├── docs               <- A default Sphinx project; see sphinx-doc.org for details.
 │
-├── models             <- Trained and serialized models, model predictions, or model summaries
+├── models             <- Frozen and serialized models.
 │
 ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
 │                         the creator's initials, and a short `-` delimited description, e.g.
@@ -67,35 +70,41 @@ The directory structure of your new project looks like this:
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
+│   └── figures        <- Generated graphics and figures to be used in reporting.
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
+│                         generated with `pip freeze > requirements.txt`.
 │
 ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
 ├── src                <- Source code for use in this project.
-│   ├── __init__.py    <- Makes src a Python module
+│   ├── __init__.py    <- Makes src a Python module.
 │   │
-│   ├── data           <- Scripts to download or generate data
+│   ├── data           <- Scripts to download or generate data.
 │   │   └── make_dataset.py
 │   │
-│   ├── features       <- Scripts to turn raw data into features for modeling
+│   ├── features       <- Scripts to turn raw data into features for modeling.
 │   │   └── build_features.py
 │   │
 │   ├── models         <- Scripts to train models and then use trained models to make
-│   │   │                 predictions
+│   │   │                 predictions.
 │   │   ├── predict_model.py
 │   │   └── train_model.py
 │   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+│   └── visualization  <- Scripts to create exploratory and results oriented visualizations.
 │       └── visualize.py
 │
-└── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+└── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io.
 ```
 
 ## Contributing
 
-We welcome contributions! [See the docs for guidelines](https://drivendata.github.io/cookiecutter-data-science/#contributing).
+This template is a work in progress.
+
+TODOs:
+- Drop Python 2.
+- Utils.
+- Public dataset pulls.
+- ...and more.
 
 ### Installing development requirements
 ------------

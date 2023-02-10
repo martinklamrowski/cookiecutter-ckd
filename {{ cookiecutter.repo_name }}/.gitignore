@@ -63,7 +63,7 @@ target/
 *.db
 *.rdb
 
-# Pycharm
+# Pycharm/Dataspell
 .idea
 
 # VS Code
